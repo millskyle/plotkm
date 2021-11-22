@@ -1,37 +1,36 @@
-# 1qbit-matplotlib-style
-Matplotlib style file following [1QBit](http://www.1qbit.com)'s brand policies.
+# KM-matplotlib-style
+Matplotlib style file following consistent with [Kyle Mills' blog](http://kylemills.net/blog).
 
-_Note that this is probably not complete.  There are plot types that are not accounted for.  Please feel free to make a pull request with updates._
+_Note that this is probably not complete.  There are plot types that are not accounted for.
 
 
 ## Use:
 Install this package, e.g. 
 ```bash
-pip install plot1qbit
+pip install -e ./
 ```
 
-Import the `plot1qbit` package prior to plotting, but after importing matplotlib.
+Import the `plotkm` package prior to plotting, but after importing matplotlib.
 
 ```python
 import matplotlib.pyplot as plt
-import plot1qbit
+import plotkm
 ```
 
 
 ### Font
 
-1QBit's brand font is Brandon Text.  This is a commercial font and thus cannot be distributed.  If you have Brandon Text installed on your computer through some other means, this package will pick it up and use it.  You may need to delete your matplotlib cache first though:
-```bash 
-rm -r $HOME/.cache/matplotlib
-```
-If you're an employee of 1QBit, a zip file containing these fonts can be found in the company Google Drive.
-
-To install fonts on Ubuntu (e.g. for plotting with a Jupyter notebook running on Google Cloud), place the otf font files in `$HOME/.local/share/fonts` and then run
+This package uses Roboto. Install on Ubuntu using sudo apt 
 
 ```bash
-fc-cache -f -v
+sudo apt install fonts-roboto
 ```
-to rebuild the font cache.
+then run
+```bash
+fc-cache -f -v
+rm -r $HOME/.cache/matplotlib
+```
+to rebuild the font cache and force matplotlib to rebuild its internal cache next time it's needed.
 
 
 ## Examples
@@ -41,13 +40,8 @@ Below are several examples
 ```python
 import numpy as np
 import matplotlib.pyplot as plt 
-import plot1qbit
+import plotkm
 ```
-
-    /home/kmills/git/1qbit-matplotlib-style/plot1qbit/initiate.py:9: MatplotlibDeprecationWarning: 
-    The createFontList function was deprecated in Matplotlib 3.2 and will be removed two minor releases later. Use FontManager.addfont instead.
-      font_list = font_manager.createFontList(font_files)
-
 
 
 ```python
@@ -70,7 +64,7 @@ fig.show()
 
 
     
-![png](output_2_0.png)
+![png](output_3_0.png)
     
 
 
@@ -81,7 +75,7 @@ xs = np.linspace(0,5*np.pi, num=100)
 
 
 axs.plot(xs, np.sin(xs), '--', label='ax.plot(..., \'--\', color=\'green\')', color='green')
-axs.plot(xs, np.sin(xs-0.3*6), 'r.-', label='ax.plot(..., \'r.-\')')
+axs.plot(xs, np.sin(xs-0.3*6), 'b.-', label='ax.plot(..., \'b.-\')')
 
 for c in range(1,6):
     axs.plot(xs, np.sin(xs - 0.3*c))
@@ -95,7 +89,7 @@ fig.show()
 
 
     
-![png](output_3_0.png)
+![png](output_4_0.png)
     
 
 
@@ -118,7 +112,7 @@ fig.show()
 
 
     
-![png](output_4_0.png)
+![png](output_5_0.png)
     
 
 
@@ -145,7 +139,7 @@ fig.show()
 
 
     
-![png](output_5_0.png)
+![png](output_6_0.png)
     
 
 
@@ -168,7 +162,7 @@ fig.show()
 
 
     
-![png](output_6_0.png)
+![png](output_7_0.png)
     
 
 
@@ -208,7 +202,7 @@ fig.show()
 
 
     
-![png](output_7_0.png)
+![png](output_8_0.png)
     
 
 

@@ -11,7 +11,7 @@ font_files = font_manager.findSystemFonts(fontpaths=[os.path.join(here, "./Brand
 for font_file in font_files:
     font_manager.fontManager.addfont(font_file)
 
-plt.style.use(os.path.join(here, '1qbit.mplstyle'))
+plt.style.use(os.path.join(here, 'plotkm.mplstyle'))
 
 #override the harsh RGB colors with more aesthetic ones:
 newc = dict(

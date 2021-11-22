@@ -1,4 +1,4 @@
-# 1QBit Matplotlib style file
+# PlotKM Matplotlib style file
 
 lines.linewidth : 1.5
 lines.linestyle : -
@@ -15,8 +15,8 @@ font.weight : regular
 axes.titlesize: x-large
 axes.titleweight: normal
 
-axes.prop_cycle  : cycler('color', 'a3352f,6e2525,db6565,8a7272,f26767,915d5d')
-axes.facecolor   : ffffff
+axes.prop_cycle  : cycler('color', '821122,b7384b,000000,a3352f,6e2525,db6565,8a7272,f26767,915d5d')
+axes.facecolor   : fffcfc
 axes.edgecolor   : 391c1c
 axes.grid       :  True
 axes.labelweight : regular
@@ -29,7 +29,7 @@ axes.labelcolor : 391c1c
 axes.labelsize : large
 #figure.facecolor : c5ccd1
 
-image.cmap : Blues
+image.cmap : Reds
 
 lines.markersize : 5
 
@@ -48,7 +48,7 @@ mathtext.default: it
 mathtext.fontset: dejavusans
 
 
-savefig.facecolor   : ffffff
+savefig.facecolor   : fffcfc
 savefig.dpi : 300
 
 
